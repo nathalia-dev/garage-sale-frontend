@@ -7,6 +7,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body a {
+  text-decoration: none;
+  color: rgb(51, 59, 59);
+}
+
+body .navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+body .navbar a:hover {
+  text-decoration: none;
+  color: rgb(37, 112, 112);
+}
+
+body a:hover {
+  text-decoration: none;
+  color: rgb(37, 112, 112);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -11,6 +11,8 @@ function NavBar({logout}) {
 		return (
 			<nav className="navbar mr-auto navbar-dark bg-dark">
         <Link to="/profile" className="nav-link ">Profile</Link>
+        <Link to="/products" className="nav-link"> Products </Link>
+        <Link to="/users" className="nav-link "> Users </Link>
         <Link to="/" onClick={logout} className="nav-link "> Logout </Link>
 			</nav>
 		);
