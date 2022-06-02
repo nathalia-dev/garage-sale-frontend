@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Garage Sale:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description:
+it is an e-commerce, full-stack project. The user can sell or buy products using the app. 
 
-## Available Scripts
+## Project Motivation:
+it was done as a second Capstone Project for my bootcamp to consolidate the knowledge of what we've learned. 
 
-In the project directory, you can run:
+## Tech Specs:
 
-### `npm start`
+- Node.js
+- React
+- JavaScript
+- PostgreSQL
+- AWS (S3 Bucket)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Important libraries and frameworks:
+- supertest: a test library for HTTP servers.
+- bcrypt: It helps to encrypt the user's password before send it to the database.
+- jsonwebtoken: It helps to share security information between two parties: a client and a server.
+- jsonschema: It helps to do data format validations.
+- create-react-app: help to build a react application.
+- axios: help to do http requests.
+- bootstrap: help to implement css in your project.
+- fontawesome: help to get some icons for the project.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## AWS - S3 buckets:
+to store all the photos from the app. 
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- create a folder where you would like to store garage-sale;
+- open your terminal and enter into this folder;
+- from your terminal, execute `git clone`;
+- you will notice that two folder were created: backend and frontend. For each one we will need to download dependencies, in order to run the app;
+- from your terminal, go inside the backend folder;
+- run `npm install`;
+- to setup the database , make sure you do have PostgreSQL installed. If you are new to PostgreSQL, please click [here]("https://www.postgresql.org/");
+- from your terminal, inside the backend directory, run `psql < jobly.sql`. It will create your database and also populate it with an initial set of data.
+- now, let's setup the frontend. From your terminal, go inside the frontend folder;
+- run npm install;
+- at this moment, everything is installed. So, let's initiate garage_sale;
+- from the frontend folder, run `npm start`;
+- from the backend folder, run `npm start`;
+- the URL you will need to access is: http://localhost:5000/ ;
+- for informational purposes, the URL for backend is: http://localhost:3001/ ; 
 
-### `npm run build`
+## Project Functionalities
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- the project is divided in 5 aspects: Users, Address, Products, Cart and Orders;
+- the user can have more than one address. But only one will be consider the *default address*. This is important when you are selling a product, as the *default address* will be the pickup address for all your products;
+- the user can't add a product to sell without an *default address* already saved;
+- every user can buy or sell products;
+- all the sales and purchases are visible at the *Orders* tab. There the user can see the address for pickup and more details about the transaction;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Improvements
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Better organize the folders inside the project;
+- Create tests;
+- Break react components into smaller components;
+- Improve the error messages, as they can be more user friendly;
+- Implement the alert messages components to all error messages;
+- Using [Stripe] ("https://stripe.com/") in the *test mode* to simulate payments with credit cards;
+- Create a message feature to allow user's to communicate;

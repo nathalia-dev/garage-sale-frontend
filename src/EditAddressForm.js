@@ -14,24 +14,21 @@ function EditAddressForm({ address, changeToggleEditButton, setAddresses }) {
 		setAddresses((addresses) => {
 			return addresses.map((address) => {
 				if (updatedAddress.isDefault && address.id !== updatedAddress.id) {
-				address.isDefault = false;
-
+					address.isDefault = false;
 				}
-				if(address.id === updatedAddress.id) {
-				for (let prop in address) {
-					address[prop] = updatedAddress[prop]
-
+				if (address.id === updatedAddress.id) {
+					for (let prop in address) {
+						address[prop] = updatedAddress[prop];
+					}
 				}
-				}
-				return address
-			})
-		})
-	}
+				return address;
+			});
+		});
+	};
 
 	const handleRadioInput = (e) => {
 		setSelectedFile(e.target.value === "true");
 	};
-
 
 	async function handleSubmit(e) {
 		e.preventDefault();
@@ -39,12 +36,12 @@ function EditAddressForm({ address, changeToggleEditButton, setAddresses }) {
 		const resUpdate = await GarageSaleApi.updateAddress(formData, address.id);
 		if (Array.isArray(resUpdate)) {
 			resetFormData();
-			changeToggleEditButton(false)
+			changeToggleEditButton(false);
 			alert(resUpdate);
 		} else {
 			resetFormData();
-			updateAddresses(resUpdate)
-			changeToggleEditButton(false)
+			updateAddresses(resUpdate);
+			changeToggleEditButton(false);
 			history.push("/address");
 		}
 	}
@@ -56,42 +53,42 @@ function EditAddressForm({ address, changeToggleEditButton, setAddresses }) {
 				<h5 className="display-6 my-3"> EDIT </h5>
 				<form onSubmit={handleSubmit}>
 					<div className="row mb-3">
-						<label htmlFor="address" className="col-sm-2 col-form-label">
+						<label htmlFor="address" className="col-sm-3 col-form-label">
 							Address
 						</label>
-						<div className="col-sm-10">
+						<div className="col-sm-9">
 							<input type="text" id="address" name="address" value={formData.address} onChange={handleChange} className="form-control"></input>
 						</div>
 					</div>
 
 					<div className="row mb-3">
-						<label htmlFor="city" className="col-sm-2 col-form-label">
+						<label htmlFor="city" className="col-sm-3 col-form-label">
 							City
 						</label>
-						<div className="col-sm-10">
+						<div className="col-sm-9">
 							<input type="text" id="city" name="city" value={formData.city} onChange={handleChange} className="form-control"></input>
 						</div>
 					</div>
 
 					<div className="row mb-3">
-						<label htmlFor="state" className="col-sm-2 col-form-label">
+						<label htmlFor="state" className="col-sm-3 col-form-label">
 							State
 						</label>
-						<div className="col-sm-10">
+						<div className="col-sm-9">
 							<input type="text" id="state" name="state" value={formData.state} onChange={handleChange} className="form-control"></input>
 						</div>
 					</div>
 
 					<div className="row mb-3">
-						<label htmlFor="zipcode" className="col-sm-2 col-form-label">
+						<label htmlFor="zipcode" className="col-sm-3 col-form-label">
 							Zipcode
 						</label>
-						<div className="col-sm-10">
+						<div className="col-sm-9">
 							<input type="text" id="zipcode" name="zipcode" value={formData.zipcode} onChange={handleChange} className="form-control"></input>
 						</div>
 					</div>
 
-					<div className="col">
+					<div className="col mt-5">
 						<p className="d-inline">Default address? </p>
 						<input className="px-2" type="radio" id="true" name="isDefault" value={true} checked={selectedFile === true} onChange={handleRadioInput}></input>
 						<label className="px-2" for="true">

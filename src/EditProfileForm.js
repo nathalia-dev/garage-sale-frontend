@@ -8,7 +8,7 @@ function EditProfileForm() {
 	const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
 	const [formData, handleChange, resetFormData] = useFields({ firstName: currentUser ? currentUser.firstName : "", lastName: currentUser ? currentUser.lastName : "" });
 	const history = useHistory();
-    const [selectedFile, setSelectedFile] = useState(null);
+	const [selectedFile, setSelectedFile] = useState(null);
 
 	const handleFileInput = (e) => {
 		setSelectedFile(e.target.files[0]);
@@ -16,7 +16,7 @@ function EditProfileForm() {
 
 	async function handleSubmit(e) {
 		e.preventDefault();
-        formData.photo = selectedFile? selectedFile : currentUser.photo
+		formData.photo = selectedFile ? selectedFile : currentUser.photo;
 		const res = await GarageSaleApi.updateUser(currentUser, formData);
 
 		if (Array.isArray(res)) {
@@ -37,7 +37,6 @@ function EditProfileForm() {
 						<label className="col-sm-2 col-form-label"> Email </label>
 						<div className="col-sm-10">
 							<p className="form-control" id="profile-email">
-								{" "}
 								<strong>{currentUser.email}</strong>
 							</p>
 						</div>
@@ -45,8 +44,7 @@ function EditProfileForm() {
 
 					<div className="row mb-3">
 						<label htmlFor="firstName" className="col-sm-2 col-form-label">
-							{" "}
-							First Name{" "}
+							First Name
 						</label>
 						<div className="col-sm-10">
 							<input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} className="form-control"></input>
@@ -67,7 +65,7 @@ function EditProfileForm() {
 							Photo
 						</label>
 						<div className="col-sm-10">
-							<input type="file" id="photo" name="photo" onChange={handleFileInput} className="form-control"></input>
+							<input type="file" id="photo" name="photo" onChange={handleFileInput} className="form-control-file"></input>
 						</div>
 					</div>
 

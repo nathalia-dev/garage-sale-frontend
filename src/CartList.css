@@ -1,0 +1,168 @@
+.cart-list body {
+	background: #ddd;
+	min-height: 100vh;
+	vertical-align: middle;
+	display: flex;
+	font-family: sans-serif;
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+.cart-list .title {
+	margin-bottom: 5vh;
+}
+
+.cart-list .card {
+	margin: auto;
+	max-width: 950px;
+	width: 90%;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 1rem;
+	border: transparent;
+}
+
+@media (max-width: 767px) {
+	.card {
+		margin: 3vh auto;
+	}
+}
+
+.cart-list .cart {
+	background-color: #fff;
+	padding: 4vh 5vh;
+	border-bottom-left-radius: 1rem;
+	border-top-left-radius: 1rem;
+}
+
+@media (max-width: 767px) {
+	.cart-list .cart {
+		padding: 4vh;
+		border-bottom-left-radius: unset;
+		border-top-right-radius: 1rem;
+	}
+}
+
+.cart-list .summary {
+	background-color: #ddd;
+	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+	padding: 4vh;
+	color: rgb(65, 65, 65);
+}
+
+@media (max-width: 767px) {
+	.cart-list .summary {
+		border-top-right-radius: unset;
+		border-bottom-left-radius: 1rem;
+	}
+}
+
+.cart-list .summary .col-2 {
+	padding: 0;
+}
+
+.cart-list .summary .col-10 {
+	padding: 0;
+}
+
+.cart-list .row {
+	margin: 0;
+}
+
+.cart-list .title b {
+	font-size: 1.5rem;
+}
+
+.cart-list .main {
+	margin: 0;
+	padding: 2vh 0;
+	width: 100%;
+}
+
+.cart-list .col-2,
+.cart-list .col {
+	padding: 0 1vh;
+}
+
+.cart-list a {
+	padding: 0 1vh;
+}
+
+.cart-list .close {
+	margin-left: auto;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.cart-list .refresh:hover {
+	color: green;
+}
+
+.cart-list .close:hover {
+	color: red;
+}
+
+.cart-list img {
+	width: 3.5rem;
+}
+
+.cart-list .back-to-shop {
+	margin-top: 4.5rem;
+}
+
+.cart-list h5 {
+	margin-top: 4vh;
+}
+
+.cart-list hr {
+	margin-top: 1.25rem;
+}
+
+.cart-list form {
+	padding: 2vh 0;
+}
+
+.cart-list select {
+	border: 1px solid rgba(0, 0, 0, 0.137);
+	padding: 1.5vh 1vh;
+	margin-bottom: 4vh;
+	outline: none;
+	width: 100%;
+	background-color: rgb(247, 247, 247);
+}
+
+.cart-list input {
+	border: 1px solid rgba(0, 0, 0, 0.137);
+	padding: 1vh;
+	margin-bottom: 4vh;
+	outline: none;
+	width: 100%;
+	background-color: rgb(247, 247, 247);
+}
+
+.cart-list input:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+.cart-list .btn {
+	color: white;
+	width: 100%;
+	font-size: 1rem;
+	padding: 1vh;
+}
+
+.cart-list a {
+	color: black;
+}
+
+.cart-list a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+#code {
+	background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+	background-repeat: no-repeat;
+	background-position-x: 95%;
+	background-position-y: center;
+}

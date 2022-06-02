@@ -1,0 +1,39 @@
+.light-font th {
+	font-weight: 500;
+	color: grey;
+	padding: 0;
+	font-size: 0.7rem;
+}
+
+.light-font td {
+	font-weight: bold;
+	padding: 0;
+	font-size: 0.75rem;
+}
+
+.order-info {
+	text-align: left;
+	font-weight: 500;
+	color: grey;
+	font-size: 0.75rem;
+}
+
+.order-info span {
+	font-weight: 500;
+	font-size: 0.88rem;
+	color: black;
+}
+
+@media (max-width: 800px) {
+	.light-font th {
+		font-size: 0.55rem;
+	}
+
+	.light-font td {
+		font-size: 0.6rem;
+	}
+
+	.fade-show {
+		display: none;
+	}
+}
