@@ -27,12 +27,13 @@ it was done as a second Capstone Project for my bootcamp to consolidate the know
 ## AWS - S3 buckets:
 to store all the photos from the app. 
 
-## Usage
+## Usage 🚀
 
 - create a folder where you would like to store garage-sale;
-- open your terminal and enter into this folder;
-- from your terminal, execute `git clone`;
-- you will notice that two folder were created: backend and frontend. For each one we will need to download dependencies, in order to run the app;
+- inside this folder, create two others: frontend and backend;
+- open your terminal and enter into the backend folder. Execute `git clone` for the repo `garage-sale-backend`;
+- now, enter into the frontend folder and execute `git clone` for the repo `garage-sale-frontend`;
+- for each one (backend and frontend) we will need to download dependencies, in order to run the app;
 - from your terminal, go inside the backend folder;
 - run `npm install`;
 - to setup the database , make sure you do have PostgreSQL installed. If you are new to PostgreSQL, please click [here]("https://www.postgresql.org/");
