@@ -63,3 +63,5 @@ to store all the photos from the app.
 - Implement the alert messages components to all error messages;
 - Using [Stripe] ("https://stripe.com/") in the *test mode* to simulate payments with credit cards;
 - Create a message feature to allow user's to communicate;
+- Create a component for “Is Loading” and for “404 page”;
+- Implement product search by city. 
